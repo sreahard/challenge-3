@@ -4,19 +4,19 @@ var http = require('http');
 var fs = require('fs');
 var bodyParser = require('body-parser');
 var db = require('./model/db');
-var animalModel = require(SOMETHING_GOES_HERE);
+var animalModel = require('./model/animal');
 
 
 
 var app = express();
 
-app.set('port', (process.env.PORT || 3000));
+app.set('port', (process.env.PORT || 5000));
 
 var animalRoutes = require('./routes/animal');
 
 app.use(express.static('public'));
 
-app.use('/api/animals', SOMETHING_GOES_HERE);
+app.use('/api/animals', animalRoutes);
 
 app.get('/', function(req, res){
 	res.readFile('index.html')

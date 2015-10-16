@@ -16,7 +16,7 @@
         <div class="row">
             <h3>
                 Your list of animals will append to this HTML element
-                <ul id="list">
+                <ul class="list-unstyled" id="list">
                     
                 </ul>
             </h3>
@@ -25,18 +25,18 @@
 
 
     <div class="container">
-        <div class="row">
-        <form action="" method="POST" role="form">
-            <legend>Make This Form Work</legend>
+        <div class="row"><br>
+        <form action="http://localhost:5000/api/animals" method="POST" role="form">
+            <legend>Enter New Animals!</legend>
         
             <div class="form-group">
                 <label for="">Animal Type</label>
-                <input type="text" class="form-control" id="" placeholder="Input field">
+                <input type="text" class="form-control" id="" name="type" placeholder="Input field">
             </div>
 
             <div class="form-group">
                 <label for="">Animal Name</label>
-                <input type="text" class="form-control" id="" placeholder="Input field">
+                <input type="text" class="form-control" id="" name="name" placeholder="Input field">
             </div>
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>

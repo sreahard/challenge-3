@@ -1,7 +1,8 @@
 var mongoose = require('mongoose');
 
 var animalSchema = new mongoose.Schema({
-	//ANIMAL SHOULD HAVE TYPE AND NAME
+	type: String,
+	name: String
 });
 
 mongoose.model('Animal', animalSchema);
